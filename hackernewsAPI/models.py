@@ -23,10 +23,10 @@ descendants
 
 
 class News(models.Model):
-    id = models.PositiveIntegerField()
+    id = models.PositiveIntegerField(primary_key=True)
     deleted = models.BooleanField()
     type = models.CharField(max_length=20)
-    by = models.CharField()
+    by = models.CharField(max_length=250)
     time = models.DateTimeField()
     text = models.TextField()
     dead = models.BooleanField()
