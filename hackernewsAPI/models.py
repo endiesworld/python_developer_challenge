@@ -1,5 +1,5 @@
 from turtle import title
-from django.contrib.postgres.fields import ArrayField
+# from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 # Create your models here.
@@ -32,11 +32,11 @@ class News(models.Model):
     dead = models.BooleanField()
     parent = models.PositiveIntegerField()
     poll = models.PositiveIntegerField()
-    kids = ArrayField()
+    kids = models.TextField()
     url = models.URLField()
     score = models.PositiveIntegerField()
     title = models.TextField()
-    parts = ArrayField()
+    parts = models.TextField()
     descendants = models.PositiveIntegerField()
 
     def return_dict(self):
